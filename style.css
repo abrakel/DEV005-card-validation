@@ -1,0 +1,162 @@
+
+/* Reglas Generales Pagina */
+
+body{
+    font-family: 'Raleway';
+}
+
+.dinput {
+    margin-top: 3px;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+}
+
+label {
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+
+}
+/* Lado Izquierdo */ 
+.contenido1{ 
+    flex:1;
+    padding-left: 10px;
+    
+}
+/* Lado Derecho */ 
+.contenido2{
+    padding-top: 80px;
+    flex: 1;
+}
+.borde1, .borde2{
+    width:220px;
+}
+
+ #boton{
+    height: 30px;
+    width: 60px;
+    background-color: grey;
+    color:#FFFF;
+    border-radius: 10%;
+    border: 1px;
+    float: right;
+    margin-right: 70px;
+} 
+.b-validar{
+    color: gold
+}
+/* Diseño Formulario */
+
+.dform{
+    width: 50%;
+    height: 60%;
+    margin: auto;
+}
+
+/* Diseño Tarjeta */
+
+.dtarjeta{
+    flex-wrap: wrap;
+    /*Tamaño y posicion*/
+    width: 321px;
+    height: 204px;
+    margin:auto;
+    /*Bordes*/
+    border-radius: 10px;
+    /*Color fondo de tarjeta*/
+    /*colores del centro hacia afuera*/
+    background-image: linear-gradient(#FFE521 10%, #ffea49 50%,#f3e36b 100%);
+    /*Sombra tarjeta*/
+    /*X - Y - difuminacion - tamaño sombra - color*/
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.banco{
+    height: 25%;
+}
+
+.chip{
+    height: 25%;
+}
+
+.numerotarjeta{
+    height: 25%;
+}
+
+.nombreusuario{
+    width: 60%;
+}
+
+.empresatarjeta{
+    width: 40%;
+    display: grid;
+}
+
+.ccard {
+    padding-left: 150px;
+    padding-top: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.ntarj{
+    margin: 0px;
+    flex: 1;
+    padding-top: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.nuser{
+    margin: 0px;
+    padding-left: 30px;
+    padding-top: 21px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.tipotarjv{
+    text-align: center;
+    margin-top: 10px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.tipotarjm{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.imgchip{
+    width: 20%;
+    height: 100%;
+    padding-left:20px;
+}
+
+.input-error{
+    outline: 2px solid red;
+  }
+
+  .input-success{
+    outline: 2px solid green;
+  }
