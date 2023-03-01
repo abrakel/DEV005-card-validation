@@ -1,16 +1,17 @@
+const ptarj = document.getElementById("tarj");
+const puser = document.getElementById("user");
+const user = document.getElementById("usuario");
+const tipom = document.getElementById("tipov") ;
+const tipov = document.getElementById("tipom");
 const validator = {
   isValid: function (a){
-    //recibir numero de tarjeta y transformarlo en arreglo
     const tarjeta = Array.from(a);
-    // Revertir el orden del arreglo
     const tarjetaInversa = tarjeta.reverse();
-    //Recorrer el arreglo inverso, iterar numeros sin multiplicar y recibirlos en un arreglo
     let arreglo1 = [];
     for (let e = 1; e < tarjeta.length;e=e+2){
       const numSolo = Array.from(tarjeta[e]);
       arreglo1 = arreglo1.concat(numSolo);
     }
-    //Recorrer el arreglo inverso, iterar, multiplicar por 2 numero por medio y recibirlos en un arreglo
     let arreglo2 = [];
     for (let i = 0; i < tarjetaInversa.length; i=i+2) {
       let por2 = tarjetaInversa[i]*2;
@@ -21,7 +22,6 @@ const validator = {
       }
       arreglo2 = arreglo2.concat(por2);
     } 
-    //Unir los dos arreglos de objetos
     const arregloFinal = arreglo1.concat(arreglo2);
     //crear nuevo arreglo de numeros
     const crearArreglo = arregloFinal.map(Number);
@@ -30,12 +30,6 @@ const validator = {
     for (let a = 0; a < crearArreglo.length; a++){
       sumaArreglo = sumaArreglo+ crearArreglo[a]; 
     }
-    //Definir variables para poner nombre si la tarjeta es valida
-    const puser = document.getElementById("user");
-    const user = document.getElementById("usuario");
-    const ptarj = document.getElementById("tarj");
-    const tipom = document.getElementById("tipov") ;
-    const tipov = document.getElementById("tipom");
     //validar la tarjeta
     if (sumaArreglo % 10 === 0) {
     //tipo de tarjeta
@@ -62,8 +56,7 @@ const validator = {
     }      
   },
   maskify: function (a){
-    const ptarj = document.getElementById("tarj");
-    ptarj.innerHTML = a.replace(/\d(?=\d{4})/g, "#");
+    ptarj.innerHTML = a.replace(/\w(?=\w{4})/g, "#");
   }
 }
 export default validator;

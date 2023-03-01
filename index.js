@@ -19,8 +19,8 @@ ntar.addEventListener("keydown", function (e){
 });
 function validempresa () {
   if (ntar.value !== ""){
-    (validator.isValid(ntar.value));
-    (validator.maskify(ntar.value));
+    validator.isValid(ntar.value);
+    validator.maskify(ntar.value);
     if (ntar.value !== ""){
       document.getElementById("idatos").reset() 
       ntar.classList.remove("input-error");
@@ -34,6 +34,3 @@ function validempresa () {
 //Eventos Click
 butn.addEventListener("click", validempresa);
 //Eventos del mouse
-butn.addEventListener("mous", function () {
-  this.className= "btn";
-})
