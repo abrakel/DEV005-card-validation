@@ -1,8 +1,3 @@
-const ptarj = document.getElementById("tarj");
-const puser = document.getElementById("user");
-const user = document.getElementById("usuario");
-const tipom = document.getElementById("tipov") ;
-const tipov = document.getElementById("tipom");
 const validator = {
   isValid: function (a){
     const tarjeta = Array.from(a);
@@ -32,31 +27,13 @@ const validator = {
     }
     //validar la tarjeta
     if (sumaArreglo % 10 === 0) {
-    //tipo de tarjeta
-      if (a[0] === "4"){
-        tipov.innerHTML = "<img src=images/visa.png width=70% height=70%>";
-        puser.innerHTML = user.value;
-        tipom.innerHTML = "";
-      } else if (a[0] === "5"){
-        tipom.innerHTML = "<img src=images/mastercard.png width=70% height=70%>";
-        puser.innerHTML = user.value;
-        tipov.innerHTML = "";
-      } else if (a[0] === ["0-3"] || ["6-9"]) {
-        tipov.innerHTML = "Otra";
-        tipom.innerHTML = "";
-        puser.innerHTML = "";
-      }
       return true;
     } else {
-      tipom.innerHTML = "";
-      tipov.innerHTML = "";
-      ptarj.innerHTML = "";
-      puser.innerHTML = "Tarjeta Invalida";
       return false;
     }      
   },
   maskify: function (a){
-    ptarj.innerHTML = a.replace(/\w(?=\w{4})/g, "#");
+    return a.replace(/\w(?=\w{4})/g, "#");
   }
 }
 export default validator;
